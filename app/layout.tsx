@@ -5,12 +5,15 @@ export const metadata: Metadata = {
   title: 'Pedro d’Alma — Onde a lógica encontra a emoção',
   description: 'Música gerada pela máquina, guiada pela poesia. Simbiose — Algoritmo & Alma.',
   openGraph: {
-    title: 'Pedro d’Alma — Onde a lógica encontra a emoção',
-    description: 'Música gerada pela máquina, guiada pela poesia. Simbiose — Algoritmo & Alma.',
-    images: ['/og-image.png'],
-    url: 'https://pedrodalma.pt',
-    type: 'website'
+    type: 'website',
+    url: 'https://pedrodalma.pt/',
+    images: ['/og-image.png'],   // fica https://pedrodalma.pt/og-image.png
   },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
+  },
+};
   icons: {
     icon: '/favicon.ico'
   }
