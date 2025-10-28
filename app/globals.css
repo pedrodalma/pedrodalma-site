@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--muted:#9aa3b2;--text:#e7ecf6;}
+body{background:radial-gradient(80% 60% at 50% 0%,rgba(135,213,255,.12),transparent 60%),#0b0f15;color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.header-blur{background:rgba(0,0,0,.35);backdrop-filter:blur(8px)}
+/* simple card */
+.card{@apply bg-card border border-white/10 rounded-2xl p-4;}
+.btn{@apply inline-block rounded-2xl font-semibold px-4 py-2;}
+.btn-solid{@apply bg-white text-black hover:brightness-95;}
+.btn-ghost{@apply border border-white/20 text-white hover:bg-white/5;}
+.link{ @apply text-cyan-300 hover:underline; }
+.section{ @apply py-14 border-t border-white/10; }
+.section-title{ @apply text-2xl font-semibold mb-4; }
+.pill{ @apply inline-block text-xs border border-white/20 rounded-full px-2 py-1 text-blue-100 bg-white/5; }
+.grad{ background:linear-gradient(90deg,#87d5ff,#b9a6ff); -webkit-background-clip:text; background-clip:text; color:transparent; }
