@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pedrodalma.pt'), // 👈 adicionada para remover o aviso
   title: 'Pedro d’Alma — Onde a lógica encontra a emoção',
   description:
     'Música gerada pela máquina, guiada pela poesia. Simbiose — Algoritmo & Alma.',
