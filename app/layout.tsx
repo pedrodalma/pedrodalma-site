@@ -1,23 +1,25 @@
-import './globals.css'
-import type { Metadata } from 'next'
+// app/layout.tsx
+import './globals.css';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pedrodalma.pt'), // 👈 adicionada para remover o aviso
+  metadataBase: new URL('https://www.pedrodalma.pt'),
   title: 'Pedro d’Alma — Onde a lógica encontra a emoção',
-  description:
-    'Música gerada pela máquina, guiada pela poesia. Simbiose — Algoritmo & Alma.',
+  description: 'Música gerada pela máquina, guiada pela poesia. Simbiose — Algoritmo & Alma.',
   openGraph: {
     type: 'website',
-    url: 'https://pedrodalma.pt/',
-    images: ['/og-image.png'], // => public/og-image.png
+    url: 'https://www.pedrodalma.pt/',
+    images: ['/og-image.png'],
+    title: 'Pedro d’Alma — Onde a lógica encontra a emoção',
+    description: 'Música gerada pela máquina, guiada pela poesia. Simbiose — Algoritmo & Alma.'
   },
   twitter: {
     card: 'summary_large_image',
     images: ['/og-image.png'],
+    title: 'Pedro d’Alma — Onde a lógica encontra a emoção',
+    description: 'Música gerada pela máquina, guiada pela poesia. Simbiose — Algoritmo & Alma.'
   },
-  icons: {
-    icon: '/favicon.ico', // => public/favicon.ico
-  },
+  icons: { icon: '/favicon.ico' }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="container h-16 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9">
+                {/* Coração-tecnológico */}
                 <svg viewBox="0 0 100 100" className="w-9 h-9 drop-shadow">
                   <defs>
                     <linearGradient id="g" x1="0" x2="1">
@@ -35,7 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       <stop offset="100%" stopColor="#b9a6ff" />
                     </linearGradient>
                   </defs>
-                  <path d="M50 84 C 30 66 16 54 16 38 C 16 26 25 18 36 18 C 43 18 47 22 50 26 C 53 22 57 18 64 18 C 75 18 84 26 84 38 C 84 54 70 66 50 84 Z" fill="url(#g)" />
+                  <path
+                    d="M50 84 C 30 66 16 54 16 38 C 16 26 25 18 36 18 C 43 18 47 22 50 26 C 53 22 57 18 64 18 C 75 18 84 26 84 38 C 84 54 70 66 50 84 Z"
+                    fill="url(#g)"
+                  />
                   <rect x="43" y="38" width="14" height="18" rx="2" fill="#0b1020" />
                   <g stroke="#9ae6ff" strokeWidth="2" strokeLinecap="round">
                     <line x1="50" y1="38" x2="50" y2="30" />
@@ -52,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <p className="text-[11px] text-zinc-400">Simbiose — Algoritmo & Alma</p>
               </div>
             </div>
+
             <nav className="hidden md:flex items-center gap-6 text-zinc-300">
               <a href="#musica" className="hover:text-white">Música</a>
               <a href="#sobre" className="hover:text-white">Sobre</a>

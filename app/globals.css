@@ -2,17 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{--muted:#9aa3b2;--text:#e7ecf6;}
-body{background:radial-gradient(80% 60% at 50% 0%,rgba(135,213,255,.12),transparent 60%),#0b0f15;color:var(--text)}
-.container{max-width:1100px;margin:0 auto;padding:0 1.25rem}
-.header-blur{background:rgba(0,0,0,.35);backdrop-filter:blur(8px)}
-/* simple card */
-.card{@apply bg-card border border-white/10 rounded-2xl p-4;}
-.btn{@apply inline-block rounded-2xl font-semibold px-4 py-2;}
-.btn-solid{@apply bg-white text-black hover:brightness-95;}
-.btn-ghost{@apply border border-white/20 text-white hover:bg-white/5;}
-.link{ @apply text-cyan-300 hover:underline; }
-.section{ @apply py-14 border-t border-white/10; }
-.section-title{ @apply text-2xl font-semibold mb-4; }
-.pill{ @apply inline-block text-xs border border-white/20 rounded-full px-2 py-1 text-blue-100 bg-white/5; }
-.grad{ background:linear-gradient(90deg,#87d5ff,#b9a6ff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+/* Layout utilitário */
+.container { @apply max-w-6xl mx-auto px-4; }
+
+.header-blur {
+  backdrop-filter: saturate(160%) blur(8px);
+  background: rgba(11, 16, 32, 0.6);
+}
+
+/* Botões */
+.btn { @apply rounded-2xl px-4 py-2 border transition; }
+.btn-solid { @apply bg-cyan-500 text-black font-semibold border-transparent hover:opacity-90; }
+.btn-ghost { @apply border-white/20 text-white hover:bg-white/10; }
+
+/* Cartão */
+.card { @apply rounded-2xl border border-white/10 p-4 bg-[#0d1320]; }
+
+/* Secções */
+.section { @apply py-16 md:py-24; }
+.section-title { @apply text-2xl font-semibold mb-3; }
+
+/* Pílula de destaque */
+.pill { @apply inline-block text-xs px-3 py-1 rounded-full bg-white/10 border border-white/10 text-zinc-200; }
+
+/* Gradiente do título */
+.grad {
+  background: linear-gradient(90deg, #87d5ff 0%, #b9a6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Links */
+.link { @apply text-cyan-300 hover:underline; }
+
+/* Base */
+html, body { background:#0b1020; color:white; }

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export:docs": "next build && node -e \"const fs=require('fs');fs.rmSync('docs',{recursive:true,force:true});fs.renameSync('out','docs');fs.writeFileSync('docs/.nojekyll','');console.log('✓ moved out -> docs & added .nojekyll');\"",
+    "export:docs": "next build && node -e \"const fs=require('fs');fs.rmSync('docs',{recursive:true,force:true});fs.renameSync('out','docs');console.log('✓ moved out -> docs');\"",
     "start": "next start"
   },
   "dependencies": {
@@ -16,10 +16,10 @@
   "devDependencies": {
     "@types/node": "22.5.0",
     "@types/react": "18.3.7",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "10.4.20",
     "eslint": "^8.57.0",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.10",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.10",
     "typescript": "5.6.3"
   }
 }
