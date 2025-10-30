@@ -91,7 +91,7 @@ export default function Home() {
               ajudou a despertar, devolvendo-lhes voz, som e respiração.
             </p>
             <p>
-              Mais do que um exercício estético, é um reencontro entre o humano e o digital: a música é gerada
+              Mais do que um exercício estético, é um encontro entre o humano e o digital: a música é gerada
               pela máquina, sob a tutela da Alma — o espaço onde a lógica e a emoção se fundem. O propósito
               é simples: provar que o futuro, mesmo digital, pode continuar a ter alma.
             </p>
